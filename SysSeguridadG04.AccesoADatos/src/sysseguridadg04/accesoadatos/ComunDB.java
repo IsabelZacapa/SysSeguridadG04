@@ -16,8 +16,13 @@ public class ComunDB {
         static final int MYSQL=2;
     }
     
-    static int TIPODB = TipoDB.SQLSERVER;
-    static String connectionURL = "";
+    static int TIPODB = TipoDB.SQLSERVER;       //PARA CONECTAR A LA BSE DE DATOS
+    static String connectionURL = "jddc:sqlserver://localhost:1433;"
+            + "database=dbPracticaG04;"
+//            + "user=sa;"
+//            + "password=;"
+            + "loginTimeout=30;encrypt=false;trustServerCertificate=false;"
+            + "integratedSecurity=true;";
     
     public static Connection obtenerConexion() throws SQLException
     {
